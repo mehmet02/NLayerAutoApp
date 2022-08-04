@@ -8,6 +8,7 @@ public class MapProfile:Profile
     {
         CreateMap<Cars, CarsDto>().ReverseMap();
         CreateMap<Category, CategoryDto>().ReverseMap();
+        CreateMap<Category, CategoryUpdateDto>().ReverseMap();
         CreateMap<CarsFeature, CarsFeatureDto>().ReverseMap();
         CreateMap<CarsUpdateDto, Cars>();
         CreateMap<Cars, CarsWithCategoryDto>();
