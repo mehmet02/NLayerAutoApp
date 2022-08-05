@@ -12,6 +12,6 @@ public class CarsRepository:GenericRepository<Cars>,ICarsRepository
 
     public async Task<List<Cars>> GetCarsWithCategory()
     {
-        return await _context.Products.Include(x=>x.Category).ToListAsync();
+        return await _context.Cars.Include(x=>x.Category).ToListAsync();
     }
 }

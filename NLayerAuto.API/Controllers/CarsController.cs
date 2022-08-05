@@ -42,11 +42,11 @@ namespace NLayerAuto.API.Controllers
             return CrateActionResult(CustomResponseDto<CarsDto>.Success(200, carsDto));
         }
         [HttpPost]
-        public async Task<IActionResult> Save(CarsDto carsDto)
+        public async Task<IActionResult> Save(Cars2Dto carsDto)
         {
             var cars = await _service.AddAsync(_mapper.Map<Cars>(carsDto));
-            var carssDto = _mapper.Map<CarsDto>(cars);
-            return CrateActionResult(CustomResponseDto<CarsDto>.Success(201, carssDto));
+            var carssDto = _mapper.Map<Cars2Dto>(cars);
+            return CrateActionResult(CustomResponseDto<Cars2Dto>.Success(201, carssDto));
         }
         [HttpPut]
         public async Task<IActionResult> Update(CarsUpdateDto carsDto)

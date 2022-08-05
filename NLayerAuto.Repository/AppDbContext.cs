@@ -12,8 +12,8 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Category> Categories { get; set; }
-    public DbSet<Cars> Products { get; set; }
-    public DbSet<CarsFeature> ProductFeatures { get; set; }
+    public DbSet<Cars> Cars { get; set; }
+    public DbSet<CarsFeature> CarsFeatures { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

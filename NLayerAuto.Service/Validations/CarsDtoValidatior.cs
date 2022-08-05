@@ -3,9 +3,9 @@ using NLayerAuto.Core.DTOs;
 
 namespace NLayerAuto.Service.Validations;
 
-public class ProductDtoValidatior:AbstractValidator<CarsDto>
+public class CarsDtoValidatior:AbstractValidator<Cars2Dto>
 {
-    public ProductDtoValidatior()
+    public CarsDtoValidatior()
     {
         RuleFor(x => x.Name).NotNull().WithMessage("{PropertyName} is required").NotEmpty().WithMessage("{ProperyName} is required");
         RuleFor(x => x.CategoryId).InclusiveBetween(1, int.MaxValue).WithMessage("{PropertyName} must be grater 0");
